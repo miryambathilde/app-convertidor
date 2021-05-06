@@ -34,10 +34,10 @@
     </div>
   </div>
   <br>
-  <!-- directiva Ngif para que solo se muestre cuando la cantidad sea maor a 0 -->
+  <!-- ponemos directiva NGIF para que solo se muestre en caso de la que la cantidad sea mayor a 0 -->
   <h5 *ngIf="cantidad > 0" class="text-center mt-2">
     <span class="badge badge-info">{{cantidad}} {{monedaActual}}</span>
-    <span class="badge badge-secondary">EQUIVALEN A:</span>
+    <span class="badge badge-secondary">EQUIVALEN A: </span>
     <span class="badge badge-danger">{{total}} {{monedaConvertir}}</span>
   </h5>
 </div>
