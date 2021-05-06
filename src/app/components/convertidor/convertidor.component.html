@@ -1,3 +1,36 @@
 <div class="container mt-4">
-  <h5>Introduce la cantidad y la moneda a lo que lo quieres convertir:</h5>
+  <h5><b>Introduce la cantidad y la moneda a lo que lo quieres convertir:</b></h5>
+  <br>
+  <div class="row">
+    <div class="col-lg-12">
+      <form>
+        <div class="form-group">
+          <label for="cantidad"><b>Indica la cantidad a convertir:</b></label>
+          <input type="number" class="form-control form-control-lg" id="cantidad" placeholder="Indica la cantidad...">
+        </div>
+      </form>
+    </div>
+    <div class="col-lg-6">
+      <div class="form-group">
+        <label for="moneda-actual"><b>Moneda actual:</b></label>
+        <select class="form-control form-control-lg" id="moneda-actual">
+          <option>EURO</option>
+          <option>LIBRA</option>
+          <option>$ USD</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="form-group">
+        <label for="moneda-convertidor"><b>Indica la moneda a la que quieres convertir el valor:</b></label>
+        <select class="form-control form-control-lg" id="moneda-convertidor">
+          <option>EURO</option>
+          <option>LIBRA</option>
+          <option>$ USD</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <br>
+  <h5 class="text-center">1000 $ USD SON 800 EUROS</h5>
 </div>
