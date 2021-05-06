@@ -7,7 +7,7 @@
           <label for="cantidad"><b>Indica la cantidad a convertir:</b></label>
           <!-- añadimos directiva NgModel TWO WAY DATA BINDING para hacer el binding con la variable cantidad -->
           <!-- aladimos event binding con el evento input y el metodo convertir  -->
-          <input type="number" class="form-control form-control-lg" id="cantidad" [(ngModel)]="cantidad" (input)="convertir" placeholder="Indica la cantidad...">
+          <input type="number" class="form-control form-control-lg" id="cantidad" [(ngModel)]="cantidad" (input)="convertir()" placeholder="Indica la cantidad...">
         </div>
     </div>
     <div class="col-lg-6">
@@ -15,7 +15,7 @@
         <label for="moneda-actual"><b>Moneda actual:</b></label>
          <!-- añadimos directiva NgModel TWO WAY DATA BINDING para hacer el binding con la variable monedaActual -->
          <!-- aladimos event binding con el evento change y el metodo convertir  -->
-        <select class="form-control form-control-lg" id="moneda-actual" [(ngModel)]="monedaActual" (change)="convertir">
+        <select class="form-control form-control-lg" id="moneda-actual" [(ngModel)]="monedaActual" (change)="convertir()">
           <!-- CREAMOS DIRECTIVA NGFOR PARA EL BINDING DE LA VARIABLE ARRAY MONEDAS -->
           <option *ngFor="let moneda of monedas">{{ moneda }}</option>
         </select>
@@ -26,7 +26,7 @@
         <label for="moneda-convertidor"><b>Indica la moneda a la que quieres convertir el valor:</b></label>
         <!-- añadimos directiva NgModel TWO WAY DATA BINDING para hacer el binding con la variable monedaActual -->
         <!-- aladimos event binding con el evento change y el metodo convertir  -->
-        <select class="form-control form-control-lg" id="moneda-convertidor" [(ngModel)]="monedaConvertir" (change)="convertir">
+        <select class="form-control form-control-lg" id="moneda-convertidor" [(ngModel)]="monedaConvertir" (change)="convertir()">
           <!-- CREAMOS DIRECTIVA NGFOR PARA EL BINDING DE LA VARIABLE ARRAY MONEDAS -->
           <option *ngFor="let moneda of monedas">{{ moneda }}</option>
         </select>
@@ -34,9 +34,10 @@
     </div>
   </div>
   <br>
-  <h5 class="text-center mt-2">
+  <!-- directiva Ngif para que solo se muestre cuando la cantidad sea maor a 0 -->
+  <h5 *ngIf="cantidad > 0" class="text-center mt-2">
     <span class="badge badge-info">{{cantidad}} {{monedaActual}}</span>
-    <span class="badge badge-secondary">SON </span>
+    <span class="badge badge-secondary">EQUIVALEN A:</span>
     <span class="badge badge-danger">{{total}} {{monedaConvertir}}</span>
   </h5>
 </div>
