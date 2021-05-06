@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./convertidor.component.css']
 })
 export class ConvertidorComponent implements OnInit {
+  cantidad = 0;
+  monedaActual = 'EUR';
+  monedaConvertir = 'USD';
+  total = 0;
 
   constructor() { }
 
