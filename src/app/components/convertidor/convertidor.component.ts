@@ -17,4 +17,10 @@ export class ConvertidorComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  //metodo CONVERTIR
+  convertir() {
+    console.log('llamada al metodo');
+  }
+
+
 }
