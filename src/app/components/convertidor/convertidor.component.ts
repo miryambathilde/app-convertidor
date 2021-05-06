@@ -10,6 +10,7 @@ export class ConvertidorComponent implements OnInit {
   monedaActual = 'EUR';
   monedaConvertir = 'USD';
   total = 0;
+  monedas: string[] = ['USD', 'EUR', 'LIBRA']
 
   constructor() { }
 

@@ -3,30 +3,29 @@
   <br>
   <div class="row">
     <div class="col-lg-12">
-      <form>
         <div class="form-group">
           <label for="cantidad"><b>Indica la cantidad a convertir:</b></label>
-          <input type="number" class="form-control form-control-lg" id="cantidad" placeholder="Indica la cantidad...">
+          <!-- añadimos directiva NgModel TWO WAY DATA BINDING para hacer el binding con la variable cantidad -->
+          <input type="number" class="form-control form-control-lg" id="cantidad" [(ngModel)]="cantidad" placeholder="Indica la cantidad...">
         </div>
-      </form>
     </div>
     <div class="col-lg-6">
       <div class="form-group">
         <label for="moneda-actual"><b>Moneda actual:</b></label>
-        <select class="form-control form-control-lg" id="moneda-actual">
-          <option>EURO</option>
-          <option>LIBRA</option>
-          <option>USD</option>
+         <!-- añadimos directiva NgModel TWO WAY DATA BINDING para hacer el binding con la variable monedaActual -->
+        <select class="form-control form-control-lg" id="moneda-actual" [(ngModel)]="monedaActual">
+          <!-- CREAMOS DIRECTIVA NGFOR PARA EL BINDING DE LA VARIABLE ARRAY MONEDAS -->
+          <option *ngFor="let moneda of monedas">{{ moneda }}</option>
         </select>
       </div>
     </div>
     <div class="col-lg-6">
       <div class="form-group">
         <label for="moneda-convertidor"><b>Indica la moneda a la que quieres convertir el valor:</b></label>
-        <select class="form-control form-control-lg" id="moneda-convertidor">
-          <option>EURO</option>
-          <option>LIBRA</option>
-          <option>USD</option>
+        <!-- añadimos directiva NgModel TWO WAY DATA BINDING para hacer el binding con la variable monedaActual -->
+        <select class="form-control form-control-lg" id="moneda-convertidor" [(ngModel)]="monedaConvertir">
+          <!-- CREAMOS DIRECTIVA NGFOR PARA EL BINDING DE LA VARIABLE ARRAY MONEDAS -->
+          <option *ngFor="let moneda of monedas">{{ moneda }}</option>
         </select>
       </div>
     </div>
